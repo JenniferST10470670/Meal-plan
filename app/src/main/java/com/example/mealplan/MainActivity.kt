@@ -12,7 +12,7 @@ import kotlinx.coroutines.handleCoroutineException
 
 class MainActivity : AppCompatActivity() {
 
-    //
+    //  Declared variables for Xml components
     private lateinit var suggestionTv: TextView
     private lateinit var editTextTime: EditText
     private lateinit var mealSuggestionBtn: Button
@@ -25,7 +25,7 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        //  Associated with Xml fil through Ids
+        //  linked Id components to the variables
 
         suggestionTv = findViewById(R.id.suggestionTv)
         editTextTime = findViewById(R.id.editTextTime)
@@ -33,65 +33,40 @@ class MainActivity : AppCompatActivity() {
         resultsTv = findViewById(R.id.ResultsTv)
         resetBtn = findViewById(R.id.ResetBtn)
 
-        // initialising the if, Else statement
-
-        val time =mealSuggestionBtn.text.toString().lowercase()
-        fun mealSuggestion(){
-            if (time == " Morning")
-            {
-                " suggestion: breakfast - (omelett with croissant)"
-
-                if (time == " Mid-Morning")
-                {
-                    " suggestion: Snacks -( chia pudding)"
-
-                } else if ( time == "'Mide-afternoon"){
-
-                    " suggestion: Nibbles -( fruit sald "
-                }
-
-            } else if (time == " Afternoon"){
-                    " suggestion : Lunch = salmon ans mix veg"
-
-            } else if ( time == "evening"){
-
-                " suggestion: Dinner- ( lamb curry with mashed potatoes"
-                {
-
-                }
-
-            }
-
-
-
-
-
-
-
+        mealSuggestionBtn.setOnClickListener(){
+            mealSuggestion()
+        }
+        resetBtn.setOnClickListener(){
+            editTextTime.text.clear()
+            resultsTv.text=""
         }
 
 
 
 
 
+    }
+    // initialising the if, Else statement
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    fun mealSuggestion(){
+        val time =editTextTime.text.toString().lowercase().trim()
+        var suggestion = ""
+        if (time == "morning") {
+            suggestion = " omlett with croissant"
+        } else if (time == "mid-morning"){
+            suggestion = "Snacks -(chia pudding"}
+        else if(time =="afternoon"){
+            suggestion = " Lunch = salmon ans mix veg"}
+        else if ( time=="mid-afternoon") {
+            suggestion= "Nibbles- fruit sald"
+        }
+        else if (time ==  "evening") {
+            suggestion = " Dinner=  Dinner- ( lamb curry with mashed potatoes"
+        }
+        else{
+            suggestion = "invalid time of day"
+        }
+        resultsTv.text= suggestion
 
 
     }

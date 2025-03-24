@@ -9,8 +9,7 @@
     android:orientation="vertical"
     android:padding="25dp"
     tools:context=".MainActivity">
-
-
+<!--    this is a text viw-->
     <TextView
         android:id="@+id/suggestionTv"
         android:layout_width="wrap_content"
@@ -24,13 +23,13 @@
 
     <EditText
         android:id="@+id/editTextTime"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:padding="25dp"
         android:layout_marginBottom="30dp"
         android:inputType="text"
-        android:text="Enter any time of day ( e.g. morning " />
+        android:hint="Enter any time of day ( e.g. morning " />
 
     <Button
         android:id="@+id/mealSuggestionBtn"
