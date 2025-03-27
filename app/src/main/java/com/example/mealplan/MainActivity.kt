@@ -33,10 +33,10 @@ class MainActivity : AppCompatActivity() {
         resultsTv = findViewById(R.id.ResultsTv)
         resetBtn = findViewById(R.id.ResetBtn)
 
-        mealSuggestionBtn.setOnClickListener(){
+        mealSuggestionBtn.setOnClickListener(){  // adding functionality to the button to provide meal  suggestions
             mealSuggestion()
         }
-        resetBtn.setOnClickListener(){
+        resetBtn.setOnClickListener(){    // adding functionality to the Reset button to clear input
             editTextTime.text.clear()
             resultsTv.text=""
         }
@@ -48,7 +48,7 @@ class MainActivity : AppCompatActivity() {
         val time = editTextTime.text.toString().lowercase().trim()
         var suggestion = ""
         if (time == "morning") {
-            suggestion = " omelette with croissant"
+            suggestion = " omelette with croissant" // we are comparing different time of day for different meal suggestions
         } else if (time == "mid-morning") {
             suggestion = "Snacks -(chia pudding"
         } else if (time == "afternoon") {
@@ -58,7 +58,7 @@ class MainActivity : AppCompatActivity() {
         } else if (time == "evening") {
             suggestion = " Dinner=  Dinner- ( lamb curry with mashed potatoes"
         } else {
-            suggestion = "invalid time of day"
+            suggestion = "invalid time of day"   // incorporated message for users when invalid  input entered
         }
         resultsTv.text = suggestion
 
