@@ -41,32 +41,28 @@ class MainActivity : AppCompatActivity() {
             resultsTv.text=""
         }
 
-
-
-
-
     }
     // initialising the if, Else statement
 
-    fun mealSuggestion(){
-        val time =editTextTime.text.toString().lowercase().trim()
+    fun mealSuggestion() {
+        val time = editTextTime.text.toString().lowercase().trim()
         var suggestion = ""
         if (time == "morning") {
-            suggestion = " omlett with croissant"
-        } else if (time == "mid-morning"){
-            suggestion = "Snacks -(chia pudding"}
-        else if(time =="afternoon"){
-            suggestion = " Lunch = salmon ans mix veg"}
-        else if ( time=="mid-afternoon") {
-            suggestion= "Nibbles- fruit sald"
-        }
-        else if (time ==  "evening") {
+            suggestion = " omelette with croissant"
+        } else if (time == "mid-morning") {
+            suggestion = "Snacks -(chia pudding"
+        } else if (time == "afternoon") {
+            suggestion = " Lunch = salmon with mix veg"
+        } else if (time == "mid-afternoon") {
+            suggestion = "Nibbles- fruit sald"
+        } else if (time == "evening") {
             suggestion = " Dinner=  Dinner- ( lamb curry with mashed potatoes"
-        }
-        else{
+        } else {
             suggestion = "invalid time of day"
         }
-        resultsTv.text= suggestion
+        resultsTv.text = suggestion
+
+
 
 
     }
