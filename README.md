@@ -15,8 +15,8 @@
 ## Project Overview
 
 The **[Meal-Plan]** is a mobile application developed as part of an assignment in the [Introduction to Mobile Application ]
-The  application was created using **Kotlin** in  **Android Studio** and ** used If Else statement   
-The app's primary purpose is that it  [ provide meal suggestion  based on time of day for users ]
+The  application was created using Kotlin in  Android Studio and we had to incorporate the If else statement as part of the assignment 
+The app's primary purpose  is to  [ provide meal suggestion  based on time of day for users ]
 
 ## Purpose and Features
 provides meals suggestion for user and 
