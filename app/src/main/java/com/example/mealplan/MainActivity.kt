@@ -44,6 +44,7 @@ class MainActivity : AppCompatActivity() {
     }
     // initialising the if, Else statement
 
+
     fun mealSuggestion() {
         val time = editTextTime.text.toString().lowercase().trim()
         var suggestion = ""
