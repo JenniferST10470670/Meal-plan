@@ -12,12 +12,13 @@ import kotlinx.coroutines.handleCoroutineException
 
 class MainActivity : AppCompatActivity() {
 
-    //  Declared variables for Xml components
+    //  Declared variables for Xml components but are not initialised
     private lateinit var suggestionTv: TextView
     private lateinit var editTextTime: EditText
     private lateinit var mealSuggestionBtn: Button
-    private lateinit var resultsTv: TextView
     private lateinit var resetBtn: Button
+    private lateinit var resultsTv: TextView
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -42,11 +43,11 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-    // initialising the if, Else statement
+    // initialising the if, Else statementB
 
 
-    fun mealSuggestion() {
-        val time = editTextTime.text.toString().lowercase().trim()
+   fun mealSuggestion() {
+        val time = editTextTime.text.toString().trim().lowercase()
         var suggestion = ""
         if (time == "morning") {
             suggestion = " omelette with croissant" // we are comparing different time of day for different meal suggestions
