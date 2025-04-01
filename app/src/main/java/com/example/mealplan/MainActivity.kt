@@ -1,3 +1,8 @@
+/*  referencing List*/
+/* https://www.youtube.com/watch?v=_u8zA1CxxV4&t=2642s*/
+/* */
+
+
 package com.example.mealplan
 
 import android.os.Bundle
